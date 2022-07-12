@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.home-image {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.home-image:hover {
+  transform: scale(1.3, 1.3)
+}
+
+p {
+  background-color: black;
   color: white;
+  width: fit-content;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "montserrat";
 }
 
-.App-link {
-  color: #61dafb;
+.load-more-btn {
+  margin: 20px;
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 25px;
+  font-family: "montserrat";
+  cursor: pointer;
+  transition: 0.8s;
+
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.load-more-btn:hover {
+  color: #fff;
+}
+
+.load-more-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  transition: 0.8s;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.load-more-btn:hover::before {
+  height: 180%;
+}
+
+.root {
+  height: 100vh;
+  width: 100vh;
+}
+
+.image-display {
+  height: 100vh;
+  width: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.image-section {
+  margin: 15px;
+  max-width: 90%;
+  max-height: 90%;
 }
